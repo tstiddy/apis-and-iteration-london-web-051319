@@ -32,18 +32,16 @@ def get_character_movies_from_api(character_name)
   film_array_of_hashes
 end
 
-# get_character_movies_from_api("R5-D4")
-
-
 
 def print_movies(films)
   # some iteration magic and puts out the movies in a nice list
   i = 0
  while i < films.count
-  puts films[i]["title"] 
+  puts "#{i+1}. #{films[i]["title"]}"
   i += 1
  end
 end
+
 
 def show_character_movies(character)
   films = get_character_movies_from_api(character)
@@ -51,7 +49,6 @@ def show_character_movies(character)
   print_movies(films)
 end
 
-show_character_movies("Darth Vader")
 
 ## BONUS
 
